@@ -8,7 +8,7 @@ public class TestGeneration {
         
         if (args.length >= 1) {
             System.out.println("Usage: java TestGeneration <datafile>");
-            return;
+            fileName = args[0];
         } else {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Enter file name: ");
@@ -42,6 +42,7 @@ public class TestGeneration {
         }
     }
 }
+
 
 
 
