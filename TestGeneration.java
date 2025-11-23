@@ -36,7 +36,6 @@ public class TestGeneration {
         } catch (IOException e) {
             System.err.println("Error loading file: " + e.getMessage());
         }
-
-        sc.close();
     }
 }
+
