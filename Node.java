@@ -48,7 +48,7 @@ public class Node implements Cloneable {
             cloned.left = (this.left != null) ? (Node) this.left.clone() : null;
             cloned.right = (this.right != null) ? (Node) this.right.clone() : null;
 
-            cloned.op = this.op != null) ? (Op) this.op.clone() : null;
+            cloned.op = (this.op != null) ? (Op) this.op.clone() : null;
         }
         catch(CloneNotSupportedException e) {
             System.out.println("Not cloneable");
@@ -151,6 +151,7 @@ public class Node implements Cloneable {
         return this.depth;
     }
 }
+
 
 
 
