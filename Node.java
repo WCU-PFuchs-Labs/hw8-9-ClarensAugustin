@@ -1,7 +1,7 @@
 
 import java.util.Random;
 
-public class Node {
+public class Node implements Cloneable {
     private Node left;
     private Node right;
     private Op op;
@@ -159,5 +159,6 @@ public class Node {
         return this.depth;
     }
 }
+
 
 
