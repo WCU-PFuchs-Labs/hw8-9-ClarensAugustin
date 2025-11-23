@@ -1,4 +1,3 @@
-package src;
 
 public abstract class Op implements Cloneable {
 
@@ -13,3 +12,4 @@ public abstract class Op implements Cloneable {
             return o;
     }
 }
+
