@@ -42,9 +42,21 @@ public class Node {
 
     @Override
     public Object clone() {
-        Object o = null;
+       Node cloned = null;
         try {
-            o = super.clone();
+            cloned = (Node) super.clone();
+
+            if (this.left != null) {
+                cloned.left = (Node) this.left.clone();
+            }
+
+            if (this.right != null) {
+                cloned.right = (Node) this.right.clone();
+            }
+
+            if (this.op != null) {
+                cloned.op = (Op) this.op.clone();
+            }
         }
         catch(CloneNotSupportedException e) {
             System.out.println("Not cloneable");
@@ -147,4 +159,5 @@ public class Node {
         return this.depth;
     }
 }
+
 
