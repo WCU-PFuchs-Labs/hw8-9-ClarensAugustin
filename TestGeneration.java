@@ -32,12 +32,13 @@ public class TestGeneration {
                     System.out.printf(", ");
                 }
             }
-            System.out.println
+            System.out.println();
         } catch (IOException e) {
             System.err.println("Error loading file: " + e.getMessage());
         }
     }
 }
+
 
 
 
