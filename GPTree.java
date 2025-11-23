@@ -131,6 +131,12 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return string.toString();
     }
 
+    public ArrayList<Node> getCross() {
+        if (crossNodes == null) {
+            crossNodes = new ArrayList<>();
+        }
+        return crossNodes;
+     }
     // implements left child to left and right child to right
     public void crossover(GPTree tree, Random rand){
         // find the points for crossover
@@ -158,6 +164,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return root.toString();
     }
 }
+
 
 
 
