@@ -1,4 +1,3 @@
-package src;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -135,3 +134,4 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return root.toString();
     }
 }
+
