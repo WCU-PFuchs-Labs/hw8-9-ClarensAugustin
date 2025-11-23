@@ -1,4 +1,3 @@
-package src;
 
 public class DataTester {
         public static void main(String[] args) {
@@ -39,3 +38,4 @@ public class DataTester {
             }
         }
 }
+
