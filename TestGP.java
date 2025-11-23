@@ -3,7 +3,7 @@
 import java.util.*;
 import java.io.*;
 
-public class TestGPTree {
+public class TestGP {
     public static void main(String[] args) {
         String fileName;
         
@@ -12,7 +12,7 @@ public class TestGPTree {
         } else {
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter file name: ");
-            fileName = scanner.nexLine();
+            fileName = sc.nexLine();
             sc.close();
         }
         
