@@ -44,7 +44,7 @@ public class Node implements Cloneable {
     public Object clone() {
         Node cloned = null; 
         try {
-           Node cloned = (Node) super.clone();
+            cloned = (Node) super.clone();
 
             cloned.left = (this.left != null) ? (Node) this.left.clone() : null;
             cloned.right = (this.right != null) ? (Node) this.right.clone() : null;
@@ -152,6 +152,7 @@ public class Node implements Cloneable {
         return this.depth;
     }
 }
+
 
 
 
