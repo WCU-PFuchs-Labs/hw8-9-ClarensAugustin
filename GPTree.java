@@ -28,15 +28,28 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         double sumSquareError = 0;
 
         for (DataRow row : dataSet.getRows()) {
-            // evaluate tree with row inputs
-            double predicted = root.eval(row.getIndependentVariables());
-
-            // calculating error
-            double error = predicted - row.getDependentVariable();
-
-            // add squared error
-            sumSquareError += Math.pow(error, 2);
-        }
+           try {     // evaluate tree with row inputs
+                double predicted = root.eval(row.getIndependentVariables());
+    
+                if (Double.isNaN(predicted) || Double.isInfinite(predicted)) {
+                    this.fitness = Double.MAX_VALUE;
+                    return;
+                }
+    
+                // calculating error
+                double error = predicted - row.getDependentVariable();
+    
+                // add squared error
+                sumSquareError += Math.pow(error, 2);
+    
+                if (Double.isInfinite(sumSquaredError)) {
+                    this.fitness = Double.MAX_VALUE;
+                    return;
+                }
+            } catch (Exception e) {
+               this.fitness = Double.MAX_VALUE;
+               return;
+            }
         this.fitness = sumSquareError;
     }
 
@@ -145,5 +158,6 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return root.toString();
     }
 }
+
 
 
