@@ -12,7 +12,7 @@ public class TestGP {
         } else {
             Scanner sc = new Scanner(System.in);
             System.out.print("Enter file name: ");
-            fileName = sc.nexLine();
+            fileName = sc.nextLine();
             sc.close();
         }
         
