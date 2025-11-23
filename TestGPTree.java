@@ -5,13 +5,17 @@ import java.io.*;
 
 public class TestGPTree {
     public static void main(String[] args) {
-        if (args.length < 1) {
-            System.out.println("Usage: java TestGP <datafile>");
-            return;
+        String fileName;
+        
+        if (args.length >=  1) {
+            fileName = args[0];
+        } else {
+            Scanner sc = new Scanner(System.in);
+            System.out.print("Enter file name: ");
+            fileName = scanner.nexLine();
+            sc.close();
         }
         
-        String fileName = args[0];
-
         try {
             System.out.println("Creating initial Generation of 500 trees");
             Generation generation = new Generation(500, 5, fileName);
