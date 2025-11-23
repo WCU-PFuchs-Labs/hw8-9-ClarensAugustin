@@ -1,4 +1,3 @@
-package src;
 
 public class Divide extends Binop {
 
@@ -12,3 +11,4 @@ public class Divide extends Binop {
     }
 
 }
+
