@@ -17,7 +17,6 @@ public class TestGP {
         }
         
         try {
-            System.out.println("Creating initial Generation of 500 trees");
             Generation generation = new Generation(500, 5, fileName);
 
             // Evolve for 50 generations
