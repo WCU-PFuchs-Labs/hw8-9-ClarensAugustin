@@ -1,4 +1,3 @@
-package src;
 
 import java.util.*;
 import java.io.*;
@@ -38,5 +37,6 @@ public class TestGeneration {
         }
     }
 }
+
 
 
