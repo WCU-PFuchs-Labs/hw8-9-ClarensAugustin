@@ -42,6 +42,7 @@ public class Node implements Cloneable {
 
     @Override
     public Object clone() {
+        Node cloned = null; 
         try {
            Node cloned = (Node) super.clone();
 
@@ -53,7 +54,7 @@ public class Node implements Cloneable {
         catch(CloneNotSupportedException e) {
             System.out.println("Not cloneable");
         }
-        return 0;
+        return cloned;
     }
 
     public void addRandomKids (NodeFactory factory, int maxDepth, Random rand) {
@@ -151,6 +152,7 @@ public class Node implements Cloneable {
         return this.depth;
     }
 }
+
 
 
 
