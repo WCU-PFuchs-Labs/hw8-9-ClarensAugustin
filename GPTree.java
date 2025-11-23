@@ -119,7 +119,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
 
     // return a string with all the binop strings
 
-  /*  public String getCrossNodes() {
+    public String getCrossNodes() {
         StringBuilder string = new StringBuilder();
         int lastIndex = crossNodes.size() -1;
         for (int i = 0; i < lastIndex; ++i){
@@ -129,7 +129,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         }
         string.append(crossNodes.get(lastIndex));
         return string.toString();
-    } */
+    } 
 
     public ArrayList<Node> getCross() {
         if (crossNodes == null) {
@@ -164,6 +164,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return root.toString();
     }
 }
+
 
 
 
