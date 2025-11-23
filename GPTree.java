@@ -65,7 +65,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
                 return 0;
             } return 1;
         }
-          if (Double.isNaN(t.fitness) || Double.isInfinite(t.fitnes)) {
+          if (Double.isNaN(t.fitness) || Double.isInfinite(t.fitness)) {
              return - 1;
         }
 
@@ -159,6 +159,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return root.toString();
     }
 }
+
 
 
 
