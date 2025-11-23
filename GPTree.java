@@ -101,10 +101,9 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
             if (this.root != null) {
                 cloned.root = (Node) this.root.clone();
             }
-            // Clone crossNodes if needed
-            if (this.crossNodes != null) {
-                cloned.crossNodes = new ArrayList<>();
-            }
+
+            cloned.crossNodes = new ArrayList<>();
+            
         } catch (CloneNotSupportedException e) {
             System.out.println("Clone not supported");
         }
@@ -159,6 +158,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return root.toString();
     }
 }
+
 
 
 
