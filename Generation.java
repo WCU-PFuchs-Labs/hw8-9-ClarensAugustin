@@ -70,8 +70,13 @@ public class Generation {
             GPTree child1 = (GPTree) parent1.clone();
             GPTree child2 = (GPTree) parent2.clone();
 
+            child1.traverse();
+            child2.traverse();
+
             // crossover
-            child1.crossover(child2, rand);
+            if (!child1.getCrossNodes().isEmpty() && !child2.getCrossNodes().isEmpty()) {
+                child1.crossover(child2, rand);
+            }
 
             // adding children
             newGeneration[i] = child1;
@@ -98,4 +103,5 @@ public class Generation {
     }
     
 }
+
 
