@@ -46,13 +46,24 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
 
     @Override
     public int compareTo(GPTree tree) {
-        if (this.fitness < tree.fitness) {
+         if (Double.isNaN(this.fitness) || Double.isInfinite(this.fitness)) {
+             if(Double.isNaN(t.fitness) || Double.isInfinite(t.fitness)) {
+                return 0;
+            } return 1;
+        }
+          if (Double.isNaN(t.fitness) || Double.isInfinite(t.fitnes)) {
+             return - 1
+        }
+
+            // Normal comparison
+        if (this.fitness < t.fitness) {
             return -1;
-        } else if (this.fitness > tree.fitness) {
+        } else if (this.fitness > t.fitness) {
             return 1;
         } else {
             return 0;
-        }
+        }    
+        
     }
 
     @Override
@@ -134,4 +145,5 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return root.toString();
     }
 }
+
 
