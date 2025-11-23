@@ -42,7 +42,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
                 // add squared error
                 sumSquareError += Math.pow(error, 2);
     
-                if (Double.isInfinite(sumSquaredError)) {
+                if (Double.isInfinite(sumSquareError)) {
                     this.fitness = Double.MAX_VALUE;
                     return;
                 }
@@ -50,7 +50,8 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
                this.fitness = Double.MAX_VALUE;
                return;
             }
-        this.fitness = sumSquareError;
+            this.fitness = sumSquareError;
+        }
     }
 
     public double getFitness() {
@@ -58,14 +59,14 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
     }
 
     @Override
-    public int compareTo(GPTree tree) {
+    public int compareTo(GPTree t) {
          if (Double.isNaN(this.fitness) || Double.isInfinite(this.fitness)) {
              if(Double.isNaN(t.fitness) || Double.isInfinite(t.fitness)) {
                 return 0;
             } return 1;
         }
           if (Double.isNaN(t.fitness) || Double.isInfinite(t.fitnes)) {
-             return - 1
+             return - 1;
         }
 
             // Normal comparison
@@ -158,6 +159,7 @@ public class GPTree implements Collector, Comparable<GPTree>, Cloneable {
         return root.toString();
     }
 }
+
 
 
 
