@@ -4,12 +4,17 @@ import java.io.*;
 
 public class TestGeneration {
     public static void main(String[] args) {
-        if (args.length < 1) {
+        String fileName;
+        
+        if (args.length >= 1) {
             System.out.println("Usage: java TestGeneration <datafile>");
             return;
+        } else {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter file name: ");
+            fileName = scanner.nextLine();
+            scanner.close();
         }
-        
-        String fileName = args[0];
 
         try {
             System.out.println("Creating generation of trees");
@@ -37,6 +42,7 @@ public class TestGeneration {
         }
     }
 }
+
 
 
 
