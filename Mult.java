@@ -1,4 +1,3 @@
-package src;
 
 public class Mult extends Binop {
 
@@ -12,3 +11,4 @@ public class Mult extends Binop {
     }
 
 }
+
