@@ -86,7 +86,6 @@ public class LinearModel extends Model {
 
 } */
 
-package src;
 
 /**
  * Author:
@@ -206,3 +205,4 @@ public class LinearModel extends Model{
 
 
 }
+
