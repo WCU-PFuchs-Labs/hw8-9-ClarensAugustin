@@ -7,27 +7,23 @@ public class TestGeneration {
         String fileName;
         
         if (args.length >= 1) {
-            System.out.println("Usage: java TestGeneration <datafile>");
             fileName = args[0];
         } else {
             Scanner scanner = new Scanner(System.in);
-            System.out.println("Enter file name: ");
+            System.out.print("Enter data file name: ");
             fileName = scanner.nextLine();
             scanner.close();
         }
 
         try {
-            System.out.println("Creating generation of trees");
             Generation generation = new Generation(500, 5, fileName);
 
-            System.out.println("Evaluating fitness");
             generation.evalAll();
 
-            System.out.println("\nEND PRODUCT");
             generation.printBestTree();
             generation.printBestFitness();
-
-            System.out.println("\nTop Ten Fitness Values: ");
+            
+            System.out.print("Top Ten Fitness Values: ");
             ArrayList<GPTree> topTen = generation.getTopTen();
 
             for (int i = 0; i < topTen.size(); i++) {
@@ -36,12 +32,13 @@ public class TestGeneration {
                     System.out.printf(", ");
                 }
             }
-            System.out.println();
+            System.out.println
         } catch (IOException e) {
             System.err.println("Error loading file: " + e.getMessage());
         }
     }
 }
+
 
 
 
