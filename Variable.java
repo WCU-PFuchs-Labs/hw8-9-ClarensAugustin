@@ -1,4 +1,4 @@
-package src;
+
 
 public class Variable extends Unop {
     private int index;
@@ -16,4 +16,5 @@ public class Variable extends Unop {
         return "X" + index;
     }
 }
+
 
