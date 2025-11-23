@@ -5,11 +5,11 @@ import java.io.*;
 
 public class TestGeneration {
     public static void main(String[] args) {
-        if (args.length ==0 ) {
-            System.out.println("Usage: java TestGeneration <file>");
+        if (args.length < 1) {
+            System.out.println("Usage: java TestGeneration <datafile>");
             return;
         }
-
+        
         String fileName = args[0];
 
         try {
@@ -38,4 +38,5 @@ public class TestGeneration {
         }
     }
 }
+
 
